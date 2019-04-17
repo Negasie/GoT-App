@@ -26,7 +26,8 @@ mongoose.connection.on('disconnected', () => {
 
 const charData = require('../populateCharacters')
 
-Character.collection.insertMany(charData, (err, data) => {
-    console.log('added data');
-    //mongoose.connection.close();
-})
+// Character.collection.insertMany(charData, (err, data) => {
+//     console.log('added data');
+//     mongoose.connection.close();
+// });
+

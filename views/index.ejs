@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>GOT Index Page</h1>
+
+          <ul>
+            <% for(let i = 0; i < foundChars.length; i++){ %>
+                <li>
+                    <a href="/got/<%=foundChars[i]._id%>"><%=foundChars[i].name; %></a> 
+                    <a href="/got/<%=foundChars[i]._id%>/edit"><button>Edit</button></a>
+                    <form action="/got/<%=foundChars[i]._id%>?_method=DELETE" method="POST">
+                        <button>KILL</button>
+                    </form>
+                </li>
+                
+            <% } %>
+        </ul>
+
+        <a href="/got/new"><button>New Character</button></a>
+
+</body>
+</html>
